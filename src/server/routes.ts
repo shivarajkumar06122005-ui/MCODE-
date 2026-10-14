@@ -190,18 +190,43 @@ apiRouter.post('/courses/:courseId/tasks/:taskId/toggle', (req: Request, res: Re
 });
 
 // 5. Complete Level
+
 apiRouter.post('/courses/:courseId/levels/:levelId/complete', (req: Request, res: Response) => {
   const userId = getUserId(req);
   const { courseId, levelId } = req.params;
   const { unitId } = req.body;
 
   const course = db.getCourse(userId, courseId);
+
   if (!course) {
     return res.status(404).json({ error: 'Course not found' });
   }
 
   const uId = Number(unitId);
   const lId = Number(levelId);
+
+  if (
+    !Number.isInteger(uId) ||
+    !Number.isInteger(lId) ||
+    uId <= 0 ||
+    lId <= 0
+  ) {
+    return res.status(400).json({ error: 'Invalid unit or level ID' });
+  }
+
+  const targetUnit = course.units.find((unit) => unit.id === uId);
+
+  if (!targetUnit) {
+    return res.status(404).json({ error: 'Unit not found' });
+  }
+
+  const targetLevel = targetUnit.levels.find((level) => level.id === lId);
+
+  if (!targetLevel) {
+    return res.status(404).json({ error: 'Level not found' });
+  }
+
+  const wasCompleted = targetLevel.status === 'completed';
 
   const updatedUnits = course.units.map((unit) => {
     if (unit.id !== uId) return unit;
@@ -212,20 +237,65 @@ apiRouter.post('/courses/:courseId/levels/:levelId/complete', (req: Request, res
           ...level,
           status: 'completed' as const,
           progress: 100,
-          tasks: level.tasks.map((t) => ({ ...t, completed: true })),
+          tasks: level.tasks.map((task) => ({
+            ...task,
+            completed: true,
+          })),
         };
       }
+
       if (level.id === lId + 1 && level.status === 'locked') {
         return {
           ...level,
           status: 'unlocked' as const,
         };
       }
+
       return level;
     });
 
     return { ...unit, levels: updatedLevels };
   });
+
+  const updatedCourse = {
+    ...course,
+    units: updatedUnits,
+  };
+
+  db.updateCourse(userId, updatedCourse);
+
+  let tokensEarned = 0;
+  let currentTokens = db.getUser(userId).tokens;
+
+  if (!wasCompleted) {
+    const reward = db.claimRewardOnce(
+      userId,
+      `level:${courseId}:${uId}:${lId}`,
+      20,
+      `Completed Level ${lId}`
+    );
+
+    if (reward.awarded) {
+      tokensEarned = 20;
+      currentTokens = reward.tokens;
+
+      db.logActivity(userId, {
+        date: new Date().toISOString().split('T')[0],
+        minutes: 30,
+        tokensEarned: 20,
+        type: 'task_completion',
+      });
+    } else {
+      currentTokens = reward.tokens;
+    }
+  }
+
+  res.json({
+    course: updatedCourse,
+    tokensEarned,
+    currentTokens,
+  });
+});
 
   const updatedCourse = { ...course, units: updatedUnits };
   db.updateCourse(userId, updatedCourse);
