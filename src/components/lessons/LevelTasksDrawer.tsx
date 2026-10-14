@@ -233,10 +233,14 @@ export const LevelTasksDrawer: React.FC<Props> = ({
       </div>
 
       {/* Footer CTA */}
-      <div className="pt-4 border-t border-[#2e261a] space-y-2">
+      <div className="pt-4 border-t border-[#2e261a] space-y-2 ">
         <button
           onClick={handleCompleteLevel}
-          className="w-full bg-[#d4a340] hover:bg-[#e4b344] active:scale-[0.99] text-[#140e04] font-bold text-xs tracking-wider uppercase py-3 rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-[#d4a340]/25 transition-all"
+          disabled={
+            (Boolean(level.quiz) && !isQuizCorrect) ||
+            completedCount !== level.tasks.length
+          }
+         className="w-full bg-[#d4a340] hover:bg-[#e4b344] active:scale-[0.99] text-[#140e04] font-bold text-xs tracking-wider uppercase py-3 rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-[#d4a340]/25 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
         >
           <Sparkles className="w-4 h-4" />
           <span>Complete Level</span>
