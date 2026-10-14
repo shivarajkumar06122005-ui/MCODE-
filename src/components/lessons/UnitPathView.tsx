@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ArrowLeft, Key, Sparkles } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
-import { IMAGES } from '../../data/defaultData';
+import { IMAGES } from "../../data/imageAssets";
 import { LevelItem, UnitItem } from '../../types';
 import { sound } from '../../utils/audio';
 import { GatewayQuizModal } from './GatewayQuizModal';
