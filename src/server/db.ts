@@ -49,6 +49,7 @@ export interface DatabaseSchema {
   activities: ActivityRecord[];
   transactions: TransactionRecord[];
   heatmaps: Record<string, StudyDay[]>; // keyed by userId
+  rewardClaims: string[]; // prevents duplicate rewards
 }
 
 const DATA_DIR = path.resolve(process.cwd(), '.data');
@@ -72,7 +73,19 @@ class DatabaseManager {
     try {
       if (fs.existsSync(DB_FILE)) {
         const raw = fs.readFileSync(DB_FILE, 'utf-8');
-        return JSON.parse(raw);
+        const parsed = JSON.parse(raw) as Partial<DatabaseSchema>;
+
+        return {
+          ...parsed,
+          users: parsed.users || {},
+          courses: parsed.courses || {},
+          environments: parsed.environments || {},
+          pets: parsed.pets || {},
+          activities: parsed.activities || [],
+          transactions: parsed.transactions || [],
+          heatmaps: parsed.heatmaps || {},
+          rewardClaims: parsed.rewardClaims || [],
+        } as DatabaseSchema;
       }
     } catch (err) {
       console.error('[DB] Failed to parse db.json, creating new database.', err);
@@ -123,6 +136,7 @@ class DatabaseManager {
       heatmaps: {
         [defaultUserId]: generateStudyHeatmap(),
       },
+      rewardClaims: [],
     };
 
     this.saveData(schema);
@@ -197,6 +211,43 @@ class DatabaseManager {
   }
 
   // --- Courses Operations ---
+  
+  public claimRewardOnce(
+    userId: string,
+    rewardKey: string,
+    amount: number,
+    reason: string
+  ): { awarded: boolean; tokens: number } {
+    const user = this.getUser(userId);
+    const claimKey = `${userId}:${rewardKey}`;
+
+    if (this.data.rewardClaims.includes(claimKey)) {
+      return { awarded: false, tokens: user.tokens };
+    }
+
+    if (!Number.isFinite(amount) || amount <= 0) {
+      throw new Error('Reward amount must be positive');
+    }
+
+    this.data.rewardClaims.push(claimKey);
+
+    user.tokens += amount;
+    user.updatedAt = new Date().toISOString();
+
+    this.data.transactions.push({
+      id: 'tx_' + Math.random().toString(36).substring(2, 9),
+      userId,
+      amount,
+      type: 'credit',
+      reason,
+      timestamp: new Date().toISOString(),
+    });
+
+    this.saveData();
+
+    return { awarded: true, tokens: user.tokens };
+  }
+
   public getCourses(userId: string = 'default_scholar'): Course[] {
     this.getUser(userId); // ensure seeded
     return this.data.courses[userId] || [];
