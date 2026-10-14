@@ -124,10 +124,18 @@ export const UnitPathView: React.FC<Props> = ({ unitId }) => {
           style={{ left: '29%', top: '65%' }}
           className="absolute -translate-x-1/2 -translate-y-1/2 z-20"
         >
-          <button
-            onClick={() => openLevel(1)}
-            className="group relative flex items-center justify-center cursor-pointer transition-transform duration-300 hover:scale-110 active:scale-95"
-          >
+          
+    <button
+        onClick={() => {
+        const level = unit.levels.find((l) => l.id === 2);
+        if (level && level.status !== 'locked') {
+          openLevel(2);
+        }
+      }}
+      disabled={unit.levels.find((l) => l.id === 2)?.status === 'locked'}
+      className="group relative flex items-center justify-center cursor-pointer transition-transform duration-300 hover:scale-110 active:scale-95 disabled:cursor-not-allowed disabled:opacity-50"
+   >
+
             {/* Pulsing ring */}
             <div className="absolute -inset-2 rounded-full border-2 border-[#55c179]/60 animate-ping pointer-events-none" />
 
