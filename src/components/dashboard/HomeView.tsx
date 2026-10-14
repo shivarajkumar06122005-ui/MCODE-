@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { ArrowRight, BookOpen, Pause, Play, Quote, RotateCcw, Sparkles } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
 import { SCHOLAR_QUOTES } from '../../data/defaultData';
+import { IMAGES } from '../../data/imageAssets';
 import { sound } from '../../utils/audio';
 
 export const HomeView: React.FC = () => {
@@ -39,6 +40,21 @@ export const HomeView: React.FC = () => {
     return `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
   };
 
+  const petImages: Record<string, string> = {
+  lumis: IMAGES.petLumis,
+  frodo: IMAGES.petFrodo,
+  astrofel: IMAGES.petAstrofel,
+  vellum: IMAGES.petVellum,
+  quill: IMAGES.petQuill,
+};
+
+const environmentImages: Record<string, string> = {
+  carrara_atrium: IMAGES.carraraMarble,
+  scholars_desk: IMAGES.scholarsDesk,
+  vintage_library: IMAGES.vintageLibrary,
+  botanists_sanctuary: IMAGES.botanistsSanctuary,
+};
+
   return (
     <div className="space-y-6 pb-12 animate-in fade-in duration-300">
       {/* HERO SANCTUARY BANNER */}
@@ -46,7 +62,9 @@ export const HomeView: React.FC = () => {
         {/* Background Environment Image */}
         <div
           className="absolute inset-0 bg-cover bg-center opacity-30 transition-all duration-700"
-          style={{ backgroundImage: `url(${equippedEnvironment.image})` }}
+          style={{
+            backgroundImage: `url(${environmentImages[equippedEnvironment.id] || equippedEnvironment.image})`,
+          }}
         />
         {/* Dark radial cozy gradient */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#14100c] via-[#16120e]/85 to-transparent" />
@@ -58,7 +76,7 @@ export const HomeView: React.FC = () => {
             <div className="relative group shrink-0">
               <div className="w-20 h-20 rounded-2xl overflow-hidden border-2 border-[#d4a340]/60 bg-[#221b13] shadow-lg shadow-[#d4a340]/20 flex items-center justify-center">
                 <img
-                  src={equippedPet.image}
+                  src={petImages[equippedPet.id] || equippedPet.image}
                   alt={equippedPet.name}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
