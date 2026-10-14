@@ -373,8 +373,19 @@ apiRouter.post('/courses/:courseId/units/:unitId/gateway-quiz', (req: Request, r
     };
 
     db.updateCourse(userId, updatedCourse);
-    const resTokens = db.updateTokens(userId, tokensEarned, `Mastered Unit ${uId} Gateway Quiz`);
-    currentTokens = resTokens.tokens;
+    const reward = db.claimRewardOnce(
+      userId,
+      `gateway:${courseId}:${uId}`,
+      tokensEarned,
+      `Mastered Unit ${uId} Gateway Quiz`
+    );
+
+    if (reward.awarded) {
+      currentTokens = reward.tokens;
+    } else {
+      tokensEarned = 0;
+      currentTokens = reward.tokens;
+    }
 
     db.logActivity(userId, {
       date: new Date().toISOString().split('T')[0],
