@@ -309,24 +309,6 @@ apiRouter.post('/courses/:courseId/levels/:levelId/complete', (req: Request, res
   });
 });
 
-  const updatedCourse = { ...course, units: updatedUnits };
-  db.updateCourse(userId, updatedCourse);
-
-  const { tokens } = db.updateTokens(userId, 20, `Completed Level ${lId}`);
-  db.logActivity(userId, {
-    date: new Date().toISOString().split('T')[0],
-    minutes: 30,
-    tokensEarned: 20,
-    type: 'task_completion',
-  });
-
-  res.json({
-    course: updatedCourse,
-    tokensEarned: 20,
-    currentTokens: tokens,
-  });
-});
-
 // 6. Gateway Quiz Verification & Unit Progression
 apiRouter.post('/courses/:courseId/units/:unitId/gateway-quiz', (req: Request, res: Response) => {
   const userId = getUserId(req);
