@@ -2,6 +2,7 @@ import React from 'react';
 import { Check, Wand2 } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
 import { sound } from '../../utils/audio';
+import { IMAGES } from '../../data/imageAssets';
 
 export const PetsView: React.FC = () => {
   const { pets, equipPet, setActiveTab } = useApp();
@@ -32,7 +33,13 @@ export const PetsView: React.FC = () => {
             {/* Companion Portrait */}
             <div className="relative aspect-video bg-[#130f0b] overflow-hidden flex items-center justify-center p-4">
               <img
-                src={pet.image}
+                 src={({
+                    lumis: IMAGES.petLumis,
+                    frodo: IMAGES.petFrodo,
+                    astrofel: IMAGES.petAstrofel,
+                    vellum: IMAGES.petVellum,
+                    quill: IMAGES.petQuill,
+                } as Record<string, string>)[pet.id] || pet.image}
                 alt={pet.name}
                 className="w-full h-full object-contain filter drop-shadow-lg transition-transform duration-300 hover:scale-105"
               />
