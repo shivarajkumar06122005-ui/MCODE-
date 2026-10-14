@@ -7,6 +7,7 @@ import {
   Lightbulb,
 } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
+import { IMAGES } from '../../data/imageAssets';
 import { sound } from '../../utils/audio';
 
 import { api } from '../../services/api';
@@ -27,6 +28,22 @@ export const ShopView: React.FC = () => {
   const [activePerkModal, setActivePerkModal] = useState<string | null>(null);
   const [liveLatex, setLiveLatex] = useState<string | null>(null);
   const [liveExplanation, setLiveExplanation] = useState<string | null>(null);
+
+  
+const environmentImages: Record<string, string> = {
+  carrara_atrium: IMAGES.carraraMarble,
+  scholars_desk: IMAGES.scholarsDesk,
+  vintage_library: IMAGES.vintageLibrary,
+  botanists_sanctuary: IMAGES.botanistsSanctuary,
+};
+
+const petImages: Record<string, string> = {
+  lumis: IMAGES.petLumis,
+  frodo: IMAGES.petFrodo,
+  astrofel: IMAGES.petAstrofel,
+  vellum: IMAGES.petVellum,
+  quill: IMAGES.petQuill,
+};
 
   const perks = [
     {
@@ -124,7 +141,7 @@ export const ShopView: React.FC = () => {
               {/* Image Preview */}
               <div className="relative h-44 overflow-hidden bg-[#110e0a]">
                 <img
-                  src={env.image}
+                  src={environmentImages[env.id] || env.image}
                   alt={env.name}
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                 />
@@ -253,7 +270,7 @@ export const ShopView: React.FC = () => {
               {/* Pet Image */}
               <div className="relative aspect-square bg-[#130f0b] p-3 flex items-center justify-center">
                 <img
-                  src={pet.image}
+                  src={petImages[pet.id] || pet.image}
                   alt={pet.name}
                   className="w-full h-full object-cover rounded-xl"
                 />
