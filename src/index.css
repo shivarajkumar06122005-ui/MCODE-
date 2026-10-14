@@ -1,0 +1,270 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-primary: #12100d;
+    --bg-card: #1b1713;
+    --bg-card-hover: #231e18;
+    --border-warm: #2e261b;
+    --border-gold: #c6922b;
+    --gold: #d4a340;
+    --gold-light: #f1be4e;
+    --gold-dim: #7f6120;
+    --text-primary: #efe7d7;
+    --text-secondary: #9f9482;
+    --text-muted: #6e6454;
+  }
+
+  body {
+    background-color: #12100d;
+    color: #efe7d7;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    user-select: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  h1, h2, h3, .font-cinzel {
+    font-family: 'Cinzel', serif;
+  }
+
+  .font-serif-quote {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+}
+
+/* LIGHT THEME (Sun mode) - White Carrara Marble & Blue & White Tile Theme */
+.light-theme {
+  --bg-primary: #f7f5f0;
+  --bg-card: #ffffff;
+  --bg-card-hover: #faf8f5;
+  --border-warm: #dcd3c0;
+  --border-gold: #1e3a8a;
+  --gold: #1e3a8a;
+  --gold-light: #2563eb;
+  --gold-dim: #1e40af;
+  --text-primary: #151a26;
+  --text-secondary: #3b4559;
+  --text-muted: #64748b;
+}
+
+.light-theme body {
+  background-color: #f7f5f0;
+  background-image: url('/src/assets/images/white_carrara_marble_1791918498342.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  color: #151a26;
+}
+
+/* Light mode overrides for layout elements */
+.light-theme aside {
+  background-color: rgba(255, 255, 255, 0.94) !important;
+  border-color: #d6cebf !important;
+  box-shadow: 4px 0 24px rgba(30, 58, 138, 0.04);
+}
+
+.light-theme .nav-btn-active {
+  background-color: #ffffff !important;
+  color: #1e3a8a !important;
+  border-color: #2563eb !important;
+  box-shadow: 0 2px 10px rgba(30, 58, 138, 0.12) !important;
+}
+
+.light-theme .nav-btn-active span:first-child {
+  color: #1e3a8a !important;
+}
+
+.light-theme .nav-btn-inactive {
+  color: #4b5563 !important;
+}
+
+.light-theme .nav-btn-inactive:hover {
+  background-color: #eff6ff !important;
+  color: #1e3a8a !important;
+}
+
+.light-theme header {
+  background-color: rgba(255, 255, 255, 0.92) !important;
+  border-color: #e2d9cc !important;
+  box-shadow: 0 2px 16px rgba(30, 58, 138, 0.05);
+}
+
+/* Cards & containers in light mode */
+.light-theme .bg-\[\#181410\],
+.light-theme .bg-\[\#14110e\],
+.light-theme .bg-\[\#14100c\],
+.light-theme .bg-\[\#130f0c\],
+.light-theme .bg-\[\#120f0c\],
+.light-theme .bg-\[\#120f0b\],
+.light-theme .bg-\[\#1b1713\],
+.light-theme .bg-\[\#100d0a\] {
+  background-color: #ffffff !important;
+  box-shadow: 0 4px 20px -2px rgba(66, 52, 28, 0.06);
+}
+
+.light-theme .bg-\[\#1a1610\],
+.light-theme .bg-\[\#1b1712\],
+.light-theme .bg-\[\#1b1610\]\/80,
+.light-theme .bg-\[\#221c13\],
+.light-theme .bg-\[\#231c14\],
+.light-theme .bg-\[\#201912\],
+.light-theme .bg-\[\#1f1913\],
+.light-theme .bg-\[\#271f14\],
+.light-theme .bg-\[\#261f15\],
+.light-theme .bg-\[\#1e1912\],
+.light-theme .bg-\[\#19140f\],
+.light-theme .bg-\[\#1d1711\],
+.light-theme .bg-\[\#201a13\],
+.light-theme .bg-\[\#201a12\],
+.light-theme .bg-\[\#1e1811\],
+.light-theme .bg-\[\#211a13\],
+.light-theme .bg-\[\#130f0b\] {
+  background-color: #f5efe2 !important;
+}
+
+/* Borders in light mode */
+.light-theme .border-\[\#262016\],
+.light-theme .border-\[\#241e15\],
+.light-theme .border-\[\#2b2419\],
+.light-theme .border-\[\#2c2419\],
+.light-theme .border-\[\#292116\],
+.light-theme .border-\[\#2e261a\],
+.light-theme .border-\[\#271f15\],
+.light-theme .border-\[\#261f15\],
+.light-theme .border-\[\#231c13\],
+.light-theme .border-\[\#292217\],
+.light-theme .border-\[\#352b1e\],
+.light-theme .border-\[\#2d251a\],
+.light-theme .border-\[\#2b2317\],
+.light-theme .border-\[\#302619\],
+.light-theme .border-\[\#382d1c\],
+.light-theme .border-\[\#2d2419\],
+.light-theme .border-\[\#332719\],
+.light-theme .border-\[\#3b2f1f\],
+.light-theme .border-\[\#362b1c\],
+.light-theme .border-\[\#231d15\],
+.light-theme .border-\[\#372d1f\],
+.light-theme .border-\[\#372b1d\],
+.light-theme .border-\[\#3d3222\] {
+  border-color: #ded5c2 !important;
+}
+
+/* Typography in light mode */
+.light-theme .text-\[\#efe7d7\],
+.light-theme .text-\[\#ede4d3\],
+.light-theme .text-\[\#ede3d1\],
+.light-theme .text-\[\#ede5d5\],
+.light-theme .text-\[\#f5ebd7\],
+.light-theme .text-\[\#f4ebdc\],
+.light-theme .text-\[\#f4ebda\],
+.light-theme .text-\[\#f0e4d0\],
+.light-theme .text-\[\#f2e7d3\],
+.light-theme .text-\[\#f0e4cc\] {
+  color: #1f1912 !important;
+}
+
+.light-theme .text-\[\#cfc2ad\],
+.light-theme .text-\[\#c7baa6\],
+.light-theme .text-\[\#ded2be\],
+.light-theme .text-\[\#cbbfae\],
+.light-theme .text-\[\#bcae97\],
+.light-theme .text-\[\#b8a994\],
+.light-theme .text-\[\#baa993\],
+.light-theme .text-\[\#c9baa6\] {
+  color: #4d4131 !important;
+}
+
+.light-theme .text-\[\#8c7f6b\],
+.light-theme .text-\[\#8e806c\],
+.light-theme .text-\[\#8a7c67\],
+.light-theme .text-\[\#887862\],
+.light-theme .text-\[\#7e715d\],
+.light-theme .text-\[\#796c58\],
+.light-theme .text-\[\#716451\],
+.light-theme .text-\[\#6e6454\],
+.light-theme .text-\[\#6d5e49\],
+.light-theme .text-\[\#817460\],
+.light-theme .text-\[\#8d7e67\],
+.light-theme .text-\[\#9c8e79\],
+.light-theme .text-\[\#9c8c74\] {
+  color: #72624d !important;
+}
+
+.light-theme input,
+.light-theme textarea,
+.light-theme select {
+  background-color: #ffffff !important;
+  color: #1e1912 !important;
+  border-color: #dcd3bf !important;
+}
+
+.light-theme input::placeholder,
+.light-theme textarea::placeholder {
+  color: #9a8a73 !important;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #14110e;
+}
+
+.light-theme ::-webkit-scrollbar-track {
+  background: #ede6d8;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2f271d;
+  border-radius: 9999px;
+}
+
+.light-theme ::-webkit-scrollbar-thumb {
+  background: #cdbeaa;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4a3d2c;
+}
+
+.light-theme ::-webkit-scrollbar-thumb:hover {
+  background: #b09f87;
+}
+
+/* Soft golden glow utility */
+.glow-gold {
+  box-shadow: 0 0 25px -3px rgba(212, 163, 64, 0.28);
+}
+
+.tile-pattern-bar {
+  background-image: url('/src/assets/images/blue_white_tile_1791918548241.jpg');
+  background-size: 48px 48px;
+}
+
+.carrara-card {
+  background-image: url('/src/assets/images/white_carrara_marble_1791918498342.jpg');
+  background-size: cover;
+}
+
+.glow-gold-lg {
+  box-shadow: 0 0 40px 4px rgba(212, 163, 64, 0.35);
+}
+
+.glow-gold-pulse {
+  animation: pulseGold 2.5s infinite;
+}
+
+@keyframes pulseGold {
+  0%, 100% {
+    box-shadow: 0 0 15px 0px rgba(212, 163, 64, 0.25);
+  }
+  50% {
+    box-shadow: 0 0 32px 6px rgba(212, 163, 64, 0.45);
+  }
+}

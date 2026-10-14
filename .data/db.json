@@ -1,0 +1,2152 @@
+{
+  "users": {
+    "default_scholar": {
+      "name": "Ren",
+      "email": "ren@gmail.com",
+      "academicLevel": "Undergraduate",
+      "department": "Mathematics",
+      "tagline": "MATH & CS '26",
+      "id": "default_scholar",
+      "tokens": 280,
+      "streak": 5,
+      "equippedEnvironmentId": "carrara_atrium",
+      "equippedPetId": "frodo",
+      "theme": "dark",
+      "scratchpad": "Linear maps preserve linear combinations: T(av + bw) = aT(v) + bT(w).",
+      "onboardingCompleted": true,
+      "createdAt": "2026-10-14T09:43:00.298Z",
+      "updatedAt": "2026-10-14T10:28:05.189Z"
+    },
+    "test_scholar": {
+      "name": "Euler",
+      "email": "ren@gmail.com",
+      "academicLevel": "Undergraduate",
+      "department": "Pure Mathematics",
+      "tagline": "MATH & CS '26",
+      "id": "test_scholar",
+      "tokens": 170,
+      "streak": 5,
+      "equippedEnvironmentId": "vintage_library",
+      "equippedPetId": "frodo",
+      "theme": "dark",
+      "scratchpad": "Kernel of T is trivial iff T is injective.",
+      "onboardingCompleted": true,
+      "createdAt": "2026-10-14T10:31:50.522Z",
+      "updatedAt": "2026-10-14T10:31:50.597Z"
+    },
+    "debug_user": {
+      "name": "Ren",
+      "email": "ren@gmail.com",
+      "academicLevel": "Undergraduate",
+      "department": "Mathematics",
+      "tagline": "MATH & CS '26",
+      "id": "debug_user",
+      "tokens": 245,
+      "streak": 5,
+      "equippedEnvironmentId": "carrara_atrium",
+      "equippedPetId": "frodo",
+      "theme": "dark",
+      "scratchpad": "Linear maps preserve linear combinations: T(av + bw) = aT(v) + bT(w).",
+      "onboardingCompleted": true,
+      "createdAt": "2026-10-14T10:31:59.285Z",
+      "updatedAt": "2026-10-14T10:31:59.285Z"
+    }
+  },
+  "courses": {
+    "default_scholar": [
+      {
+        "id": "linear-algebra-110a",
+        "code": "MATH 110 A",
+        "title": "Linear Algebra",
+        "instructor": "Department of Mathematics",
+        "referenceBook": "Linear Algebra Done Right by S. Axler",
+        "progress": 35,
+        "totalUnits": 5,
+        "totalLevels": 25,
+        "units": [
+          {
+            "id": 1,
+            "roman": "I",
+            "title": "Vector Spaces",
+            "subtitle": "Linear Algebra • Unit 1",
+            "status": "current",
+            "topics": [
+              "1. Vector Properties",
+              "2. Subspaces & Span",
+              "3. Linear Independence",
+              "4. Bases and Dimension",
+              "5. Gateway Quiz"
+            ],
+            "coords": {
+              "angle": 270,
+              "radius": 155
+            },
+            "levels": [
+              {
+                "id": 1,
+                "name": "Lvl 1",
+                "title": "Vector Spaces",
+                "description": "Axioms, fields, vectors, and linear combinations.",
+                "status": "unlocked",
+                "progress": 50,
+                "coords": {
+                  "x": 30,
+                  "y": 64
+                },
+                "tasks": [
+                  {
+                    "id": "t1",
+                    "title": "Read: Chapter 1 (Vector Spaces) in 'Linear Algebra Done Right' by S. Axler",
+                    "type": "read",
+                    "completed": true,
+                    "tokenReward": 10
+                  },
+                  {
+                    "id": "t2",
+                    "title": "Watch: 'Vectors, what even are they?' by 3Blue1Brown on YouTube",
+                    "type": "watch",
+                    "completed": true,
+                    "tokenReward": 10
+                  },
+                  {
+                    "id": "t3",
+                    "title": "Theory: Write the formal definitions of a vector space over a field F and linear independence",
+                    "type": "theory",
+                    "completed": false,
+                    "tokenReward": 10
+                  },
+                  {
+                    "id": "t4",
+                    "title": "Practice: Prove that the set of functions {f: R -> R} form a vector space over R",
+                    "type": "practice",
+                    "completed": false,
+                    "tokenReward": 10
+                  }
+                ],
+                "quiz": {
+                  "id": "q1",
+                  "question": "The Rank-Nullity Theorem states that:",
+                  "options": [
+                    "dim(V) = rank(T) + nullity(T)",
+                    "dim(V) = rank(T) * nullity(T)",
+                    "dim(V) = rank(T) - nullity(T)",
+                    "dim(V) = nullity(T) / rank(T)"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "For a linear transformation T: V -> W on a finite-dimensional vector space V, dim(V) = dim(range T) + dim(null T)."
+                }
+              },
+              {
+                "id": 2,
+                "name": "Lvl 2",
+                "title": "Subspaces & Span",
+                "description": "Direct sums, spans of subsets, and subspace verification criteria.",
+                "status": "unlocked",
+                "progress": 0,
+                "coords": {
+                  "x": 44,
+                  "y": 56
+                },
+                "tasks": [
+                  {
+                    "id": "t2_1",
+                    "title": "Verify that intersection of two subspaces U and W is always a subspace.",
+                    "type": "theory",
+                    "completed": false,
+                    "tokenReward": 10
+                  },
+                  {
+                    "id": "t2_2",
+                    "title": "Work through 5 problems on linear span in Axler §1.C.",
+                    "type": "practice",
+                    "completed": false,
+                    "tokenReward": 10
+                  }
+                ],
+                "quiz": {
+                  "id": "q2",
+                  "question": "Which of the following is NOT required for U to be a subspace of V?",
+                  "options": [
+                    "U contains the additive identity 0",
+                    "U is closed under vector addition",
+                    "U is closed under scalar multiplication",
+                    "U contains all orthonormal eigenvectors"
+                  ],
+                  "correctIndex": 3,
+                  "explanation": "Subspaces only require 0 in U, closure under addition, and closure under scalar multiplication."
+                }
+              },
+              {
+                "id": 3,
+                "name": "Lvl 3",
+                "title": "Linear Independence",
+                "description": "Linear combinations, testing independence, and coefficients.",
+                "status": "locked",
+                "progress": 0,
+                "coords": {
+                  "x": 57,
+                  "y": 52
+                },
+                "tasks": [
+                  {
+                    "id": "t3_1",
+                    "title": "Read: Linear Independence and Linear Dependence Lemma in §2.A.",
+                    "type": "read",
+                    "completed": false,
+                    "tokenReward": 10
+                  },
+                  {
+                    "id": "t3_2",
+                    "title": "Construct a proof for the linear dependence lemma.",
+                    "type": "theory",
+                    "completed": false,
+                    "tokenReward": 10
+                  }
+                ]
+              },
+              {
+                "id": 4,
+                "name": "Lvl 4",
+                "title": "Bases and Dimension",
+                "description": "Spanning lists, minimal spanning sets, and dimension invariance.",
+                "status": "locked",
+                "progress": 0,
+                "coords": {
+                  "x": 67,
+                  "y": 46
+                },
+                "tasks": [
+                  {
+                    "id": "t4_1",
+                    "title": "Study: Every spanning list can be reduced to a basis.",
+                    "type": "read",
+                    "completed": false,
+                    "tokenReward": 10
+                  },
+                  {
+                    "id": "t4_2",
+                    "title": "Solve dimension equations for sum of subspaces: dim(U + W).",
+                    "type": "practice",
+                    "completed": false,
+                    "tokenReward": 10
+                  }
+                ]
+              },
+              {
+                "id": 5,
+                "name": "GATEWAY QUIZ",
+                "title": "Vector Spaces Gateway Quiz",
+                "description": "Complete the gateway assessment to unlock Unit II: Linear Transformations.",
+                "status": "unlocked",
+                "progress": 0,
+                "coords": {
+                  "x": 66,
+                  "y": 39
+                },
+                "tasks": []
+              }
+            ],
+            "gatewayQuiz": {
+              "title": "Gateway Quiz",
+              "description": "ATTEMPTS ALLOWED • Minimum 40% required to unlock Unit II",
+              "passingScore": 4,
+              "questions": [
+                {
+                  "id": "gw1",
+                  "question": "If V and W are vector spaces over F, then dim(V x W) is:",
+                  "options": [
+                    "dim(V) + dim(W)",
+                    "dim(V) * dim(W)",
+                    "max(dim V, dim W)",
+                    "dim(V) - dim(W)"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "The dimension of the direct product V x W equals dim(V) + dim(W)."
+                },
+                {
+                  "id": "gw2",
+                  "question": "Which of the following polynomials are linearly independent in P_2(R)?",
+                  "options": [
+                    "{1, x, x^2}",
+                    "{1, 1 + x, 2 + x}",
+                    "{x, x^2, x + x^2}",
+                    "{0, x, x^2}"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "The standard monomial basis {1, x, x^2} is linearly independent."
+                },
+                {
+                  "id": "gw3",
+                  "question": "The zero vector in a vector space V is:",
+                  "options": [
+                    "Unique",
+                    "Non-unique",
+                    "Always undefined",
+                    "Dependent on field characteristic"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "By the axioms of vector spaces, the additive identity is strictly unique."
+                },
+                {
+                  "id": "gw4",
+                  "question": "If a list of vectors v1, ..., vn spans V, then:",
+                  "options": [
+                    "Any linearly independent list in V has length <= n",
+                    "Any linearly independent list in V has length >= n",
+                    "dim(V) must equal n + 1",
+                    "V cannot be finite-dimensional"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Fundamental theorem: Length of linearly independent list <= length of spanning list."
+                },
+                {
+                  "id": "gw5",
+                  "question": "The intersection of any collection of subspaces of V is:",
+                  "options": [
+                    "Always a subspace of V",
+                    "Never a subspace unless both are trivial",
+                    "Only a subspace if V is real",
+                    "A manifold"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Arbitrary intersections of subspaces are always subspaces."
+                }
+              ]
+            }
+          },
+          {
+            "id": 2,
+            "roman": "II",
+            "title": "Linear Transformations",
+            "subtitle": "Linear Algebra • Unit 2",
+            "status": "locked",
+            "topics": [
+              "1. Definition of Maps",
+              "2. Fundamental Nullspaces",
+              "3. Invertibility & Matrices",
+              "4. Matrix of a Linear Map",
+              "5. Gateway Quiz"
+            ],
+            "coords": {
+              "angle": 342,
+              "radius": 155
+            },
+            "levels": [
+              {
+                "id": 1,
+                "name": "Lvl 1",
+                "title": "Linear Maps",
+                "description": "Definition and algebraic properties of linear transformations.",
+                "status": "unlocked",
+                "progress": 0,
+                "coords": {
+                  "x": 30,
+                  "y": 64
+                },
+                "tasks": [
+                  {
+                    "id": "u2_t1",
+                    "title": "Study linear maps preservation of addition and scalar multiplication.",
+                    "type": "read",
+                    "completed": false,
+                    "tokenReward": 10
+                  }
+                ]
+              }
+            ],
+            "gatewayQuiz": {
+              "title": "Unit II Gateway Quiz",
+              "description": "Prove mastery of linear transformations.",
+              "passingScore": 4,
+              "questions": []
+            }
+          },
+          {
+            "id": 3,
+            "roman": "III",
+            "title": "Eigenvalues & Eigenvectors",
+            "subtitle": "Linear Algebra • Unit 3",
+            "status": "locked",
+            "topics": [
+              "1. Invariant Subspaces",
+              "2. Characteristic Polynomial",
+              "3. Diagonalization",
+              "4. Eigenspaces",
+              "5. Gateway Quiz"
+            ],
+            "coords": {
+              "angle": 54,
+              "radius": 155
+            },
+            "levels": [],
+            "gatewayQuiz": {
+              "title": "Unit III Gateway Quiz",
+              "description": "Eigenvalues assessment.",
+              "passingScore": 4,
+              "questions": []
+            }
+          },
+          {
+            "id": 4,
+            "roman": "IV",
+            "title": "Inner Product Spaces",
+            "subtitle": "Linear Algebra • Unit 4",
+            "status": "locked",
+            "topics": [
+              "1. Inner Products & Norms",
+              "2. Orthonormal Bases",
+              "3. Gram-Schmidt Procedure",
+              "4. Orthogonal Complements",
+              "5. Gateway Quiz"
+            ],
+            "coords": {
+              "angle": 126,
+              "radius": 155
+            },
+            "levels": [],
+            "gatewayQuiz": {
+              "title": "Unit IV Gateway Quiz",
+              "description": "Inner Product assessment.",
+              "passingScore": 4,
+              "questions": []
+            }
+          },
+          {
+            "id": 5,
+            "roman": "V",
+            "title": "Operators on Complex Spaces",
+            "subtitle": "Linear Algebra • Unit 5",
+            "status": "locked",
+            "topics": [
+              "1. Generalized Eigenspaces",
+              "2. Nilpotent Operators",
+              "3. Jordan Canonical Form",
+              "4. Spectral Theorem",
+              "5. Final Mastery Gateway"
+            ],
+            "coords": {
+              "angle": 198,
+              "radius": 155
+            },
+            "levels": [],
+            "gatewayQuiz": {
+              "title": "Unit V Gateway Quiz",
+              "description": "Final complex operator mastery.",
+              "passingScore": 4,
+              "questions": []
+            }
+          }
+        ]
+      }
+    ],
+    "test_scholar": [
+      {
+        "id": "linear-algebra-110a",
+        "code": "MATH 110 A",
+        "title": "Linear Algebra",
+        "instructor": "Department of Mathematics",
+        "referenceBook": "Linear Algebra Done Right by S. Axler",
+        "progress": 29,
+        "totalUnits": 5,
+        "totalLevels": 25,
+        "units": [
+          {
+            "id": 1,
+            "roman": "I",
+            "title": "Vector Spaces",
+            "subtitle": "Linear Algebra • Unit 1",
+            "status": "completed",
+            "topics": [
+              "1. Vector Properties",
+              "2. Subspaces & Span",
+              "3. Linear Independence",
+              "4. Bases and Dimension",
+              "5. Gateway Quiz"
+            ],
+            "coords": {
+              "angle": 270,
+              "radius": 155
+            },
+            "levels": [
+              {
+                "id": 1,
+                "name": "Lvl 1",
+                "title": "Vector Spaces",
+                "description": "Axioms, fields, vectors, and linear combinations.",
+                "status": "unlocked",
+                "progress": 25,
+                "coords": {
+                  "x": 30,
+                  "y": 64
+                },
+                "tasks": [
+                  {
+                    "id": "t1",
+                    "title": "Read: Chapter 1 (Vector Spaces) in 'Linear Algebra Done Right' by S. Axler",
+                    "type": "read",
+                    "completed": false,
+                    "tokenReward": 10
+                  },
+                  {
+                    "id": "t2",
+                    "title": "Watch: 'Vectors, what even are they?' by 3Blue1Brown on YouTube",
+                    "type": "watch",
+                    "completed": true,
+                    "tokenReward": 10
+                  },
+                  {
+                    "id": "t3",
+                    "title": "Theory: Write the formal definitions of a vector space over a field F and linear independence",
+                    "type": "theory",
+                    "completed": false,
+                    "tokenReward": 10
+                  },
+                  {
+                    "id": "t4",
+                    "title": "Practice: Prove that the set of functions {f: R -> R} form a vector space over R",
+                    "type": "practice",
+                    "completed": false,
+                    "tokenReward": 10
+                  }
+                ],
+                "quiz": {
+                  "id": "q1",
+                  "question": "The Rank-Nullity Theorem states that:",
+                  "options": [
+                    "dim(V) = rank(T) + nullity(T)",
+                    "dim(V) = rank(T) * nullity(T)",
+                    "dim(V) = rank(T) - nullity(T)",
+                    "dim(V) = nullity(T) / rank(T)"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "For a linear transformation T: V -> W on a finite-dimensional vector space V, dim(V) = dim(range T) + dim(null T)."
+                }
+              },
+              {
+                "id": 2,
+                "name": "Lvl 2",
+                "title": "Subspaces & Span",
+                "description": "Direct sums, spans of subsets, and subspace verification criteria.",
+                "status": "unlocked",
+                "progress": 0,
+                "coords": {
+                  "x": 44,
+                  "y": 56
+                },
+                "tasks": [
+                  {
+                    "id": "t2_1",
+                    "title": "Verify that intersection of two subspaces U and W is always a subspace.",
+                    "type": "theory",
+                    "completed": false,
+                    "tokenReward": 10
+                  },
+                  {
+                    "id": "t2_2",
+                    "title": "Work through 5 problems on linear span in Axler §1.C.",
+                    "type": "practice",
+                    "completed": false,
+                    "tokenReward": 10
+                  }
+                ],
+                "quiz": {
+                  "id": "q2",
+                  "question": "Which of the following is NOT required for U to be a subspace of V?",
+                  "options": [
+                    "U contains the additive identity 0",
+                    "U is closed under vector addition",
+                    "U is closed under scalar multiplication",
+                    "U contains all orthonormal eigenvectors"
+                  ],
+                  "correctIndex": 3,
+                  "explanation": "Subspaces only require 0 in U, closure under addition, and closure under scalar multiplication."
+                }
+              },
+              {
+                "id": 3,
+                "name": "Lvl 3",
+                "title": "Linear Independence",
+                "description": "Linear combinations, testing independence, and coefficients.",
+                "status": "locked",
+                "progress": 0,
+                "coords": {
+                  "x": 57,
+                  "y": 52
+                },
+                "tasks": [
+                  {
+                    "id": "t3_1",
+                    "title": "Read: Linear Independence and Linear Dependence Lemma in §2.A.",
+                    "type": "read",
+                    "completed": false,
+                    "tokenReward": 10
+                  },
+                  {
+                    "id": "t3_2",
+                    "title": "Construct a proof for the linear dependence lemma.",
+                    "type": "theory",
+                    "completed": false,
+                    "tokenReward": 10
+                  }
+                ]
+              },
+              {
+                "id": 4,
+                "name": "Lvl 4",
+                "title": "Bases and Dimension",
+                "description": "Spanning lists, minimal spanning sets, and dimension invariance.",
+                "status": "locked",
+                "progress": 0,
+                "coords": {
+                  "x": 67,
+                  "y": 46
+                },
+                "tasks": [
+                  {
+                    "id": "t4_1",
+                    "title": "Study: Every spanning list can be reduced to a basis.",
+                    "type": "read",
+                    "completed": false,
+                    "tokenReward": 10
+                  },
+                  {
+                    "id": "t4_2",
+                    "title": "Solve dimension equations for sum of subspaces: dim(U + W).",
+                    "type": "practice",
+                    "completed": false,
+                    "tokenReward": 10
+                  }
+                ]
+              },
+              {
+                "id": 5,
+                "name": "GATEWAY QUIZ",
+                "title": "Vector Spaces Gateway Quiz",
+                "description": "Complete the gateway assessment to unlock Unit II: Linear Transformations.",
+                "status": "unlocked",
+                "progress": 0,
+                "coords": {
+                  "x": 66,
+                  "y": 39
+                },
+                "tasks": []
+              }
+            ],
+            "gatewayQuiz": {
+              "title": "Gateway Quiz",
+              "description": "ATTEMPTS ALLOWED • Minimum 40% required to unlock Unit II",
+              "passingScore": 4,
+              "questions": [
+                {
+                  "id": "gw1",
+                  "question": "If V and W are vector spaces over F, then dim(V x W) is:",
+                  "options": [
+                    "dim(V) + dim(W)",
+                    "dim(V) * dim(W)",
+                    "max(dim V, dim W)",
+                    "dim(V) - dim(W)"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "The dimension of the direct product V x W equals dim(V) + dim(W)."
+                },
+                {
+                  "id": "gw2",
+                  "question": "Which of the following polynomials are linearly independent in P_2(R)?",
+                  "options": [
+                    "{1, x, x^2}",
+                    "{1, 1 + x, 2 + x}",
+                    "{x, x^2, x + x^2}",
+                    "{0, x, x^2}"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "The standard monomial basis {1, x, x^2} is linearly independent."
+                },
+                {
+                  "id": "gw3",
+                  "question": "The zero vector in a vector space V is:",
+                  "options": [
+                    "Unique",
+                    "Non-unique",
+                    "Always undefined",
+                    "Dependent on field characteristic"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "By the axioms of vector spaces, the additive identity is strictly unique."
+                },
+                {
+                  "id": "gw4",
+                  "question": "If a list of vectors v1, ..., vn spans V, then:",
+                  "options": [
+                    "Any linearly independent list in V has length <= n",
+                    "Any linearly independent list in V has length >= n",
+                    "dim(V) must equal n + 1",
+                    "V cannot be finite-dimensional"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Fundamental theorem: Length of linearly independent list <= length of spanning list."
+                },
+                {
+                  "id": "gw5",
+                  "question": "The intersection of any collection of subspaces of V is:",
+                  "options": [
+                    "Always a subspace of V",
+                    "Never a subspace unless both are trivial",
+                    "Only a subspace if V is real",
+                    "A manifold"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Arbitrary intersections of subspaces are always subspaces."
+                }
+              ]
+            }
+          },
+          {
+            "id": 2,
+            "roman": "II",
+            "title": "Linear Transformations",
+            "subtitle": "Linear Algebra • Unit 2",
+            "status": "current",
+            "topics": [
+              "1. Definition of Maps",
+              "2. Fundamental Nullspaces",
+              "3. Invertibility & Matrices",
+              "4. Matrix of a Linear Map",
+              "5. Gateway Quiz"
+            ],
+            "coords": {
+              "angle": 342,
+              "radius": 155
+            },
+            "levels": [
+              {
+                "id": 1,
+                "name": "Lvl 1",
+                "title": "Linear Maps",
+                "description": "Definition and algebraic properties of linear transformations.",
+                "status": "unlocked",
+                "progress": 0,
+                "coords": {
+                  "x": 30,
+                  "y": 64
+                },
+                "tasks": [
+                  {
+                    "id": "u2_t1",
+                    "title": "Study linear maps preservation of addition and scalar multiplication.",
+                    "type": "read",
+                    "completed": false,
+                    "tokenReward": 10
+                  }
+                ]
+              }
+            ],
+            "gatewayQuiz": {
+              "title": "Unit II Gateway Quiz",
+              "description": "Prove mastery of linear transformations.",
+              "passingScore": 4,
+              "questions": []
+            }
+          },
+          {
+            "id": 3,
+            "roman": "III",
+            "title": "Eigenvalues & Eigenvectors",
+            "subtitle": "Linear Algebra • Unit 3",
+            "status": "locked",
+            "topics": [
+              "1. Invariant Subspaces",
+              "2. Characteristic Polynomial",
+              "3. Diagonalization",
+              "4. Eigenspaces",
+              "5. Gateway Quiz"
+            ],
+            "coords": {
+              "angle": 54,
+              "radius": 155
+            },
+            "levels": [],
+            "gatewayQuiz": {
+              "title": "Unit III Gateway Quiz",
+              "description": "Eigenvalues assessment.",
+              "passingScore": 4,
+              "questions": []
+            }
+          },
+          {
+            "id": 4,
+            "roman": "IV",
+            "title": "Inner Product Spaces",
+            "subtitle": "Linear Algebra • Unit 4",
+            "status": "locked",
+            "topics": [
+              "1. Inner Products & Norms",
+              "2. Orthonormal Bases",
+              "3. Gram-Schmidt Procedure",
+              "4. Orthogonal Complements",
+              "5. Gateway Quiz"
+            ],
+            "coords": {
+              "angle": 126,
+              "radius": 155
+            },
+            "levels": [],
+            "gatewayQuiz": {
+              "title": "Unit IV Gateway Quiz",
+              "description": "Inner Product assessment.",
+              "passingScore": 4,
+              "questions": []
+            }
+          },
+          {
+            "id": 5,
+            "roman": "V",
+            "title": "Operators on Complex Spaces",
+            "subtitle": "Linear Algebra • Unit 5",
+            "status": "locked",
+            "topics": [
+              "1. Generalized Eigenspaces",
+              "2. Nilpotent Operators",
+              "3. Jordan Canonical Form",
+              "4. Spectral Theorem",
+              "5. Final Mastery Gateway"
+            ],
+            "coords": {
+              "angle": 198,
+              "radius": 155
+            },
+            "levels": [],
+            "gatewayQuiz": {
+              "title": "Unit V Gateway Quiz",
+              "description": "Final complex operator mastery.",
+              "passingScore": 4,
+              "questions": []
+            }
+          }
+        ]
+      }
+    ],
+    "debug_user": [
+      {
+        "id": "linear-algebra-110a",
+        "code": "MATH 110 A",
+        "title": "Linear Algebra",
+        "instructor": "Department of Mathematics",
+        "referenceBook": "Linear Algebra Done Right by S. Axler",
+        "progress": 9,
+        "totalUnits": 5,
+        "totalLevels": 25,
+        "units": [
+          {
+            "id": 1,
+            "roman": "I",
+            "title": "Vector Spaces",
+            "subtitle": "Linear Algebra • Unit 1",
+            "status": "current",
+            "topics": [
+              "1. Vector Properties",
+              "2. Subspaces & Span",
+              "3. Linear Independence",
+              "4. Bases and Dimension",
+              "5. Gateway Quiz"
+            ],
+            "coords": {
+              "angle": 270,
+              "radius": 155
+            },
+            "levels": [
+              {
+                "id": 1,
+                "name": "Lvl 1",
+                "title": "Vector Spaces",
+                "description": "Axioms, fields, vectors, and linear combinations.",
+                "status": "unlocked",
+                "progress": 25,
+                "coords": {
+                  "x": 30,
+                  "y": 64
+                },
+                "tasks": [
+                  {
+                    "id": "t1",
+                    "title": "Read: Chapter 1 (Vector Spaces) in 'Linear Algebra Done Right' by S. Axler",
+                    "type": "read",
+                    "completed": false,
+                    "tokenReward": 10
+                  },
+                  {
+                    "id": "t2",
+                    "title": "Watch: 'Vectors, what even are they?' by 3Blue1Brown on YouTube",
+                    "type": "watch",
+                    "completed": true,
+                    "tokenReward": 10
+                  },
+                  {
+                    "id": "t3",
+                    "title": "Theory: Write the formal definitions of a vector space over a field F and linear independence",
+                    "type": "theory",
+                    "completed": false,
+                    "tokenReward": 10
+                  },
+                  {
+                    "id": "t4",
+                    "title": "Practice: Prove that the set of functions {f: R -> R} form a vector space over R",
+                    "type": "practice",
+                    "completed": false,
+                    "tokenReward": 10
+                  }
+                ],
+                "quiz": {
+                  "id": "q1",
+                  "question": "The Rank-Nullity Theorem states that:",
+                  "options": [
+                    "dim(V) = rank(T) + nullity(T)",
+                    "dim(V) = rank(T) * nullity(T)",
+                    "dim(V) = rank(T) - nullity(T)",
+                    "dim(V) = nullity(T) / rank(T)"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "For a linear transformation T: V -> W on a finite-dimensional vector space V, dim(V) = dim(range T) + dim(null T)."
+                }
+              },
+              {
+                "id": 2,
+                "name": "Lvl 2",
+                "title": "Subspaces & Span",
+                "description": "Direct sums, spans of subsets, and subspace verification criteria.",
+                "status": "unlocked",
+                "progress": 0,
+                "coords": {
+                  "x": 44,
+                  "y": 56
+                },
+                "tasks": [
+                  {
+                    "id": "t2_1",
+                    "title": "Verify that intersection of two subspaces U and W is always a subspace.",
+                    "type": "theory",
+                    "completed": false,
+                    "tokenReward": 10
+                  },
+                  {
+                    "id": "t2_2",
+                    "title": "Work through 5 problems on linear span in Axler §1.C.",
+                    "type": "practice",
+                    "completed": false,
+                    "tokenReward": 10
+                  }
+                ],
+                "quiz": {
+                  "id": "q2",
+                  "question": "Which of the following is NOT required for U to be a subspace of V?",
+                  "options": [
+                    "U contains the additive identity 0",
+                    "U is closed under vector addition",
+                    "U is closed under scalar multiplication",
+                    "U contains all orthonormal eigenvectors"
+                  ],
+                  "correctIndex": 3,
+                  "explanation": "Subspaces only require 0 in U, closure under addition, and closure under scalar multiplication."
+                }
+              },
+              {
+                "id": 3,
+                "name": "Lvl 3",
+                "title": "Linear Independence",
+                "description": "Linear combinations, testing independence, and coefficients.",
+                "status": "locked",
+                "progress": 0,
+                "coords": {
+                  "x": 57,
+                  "y": 52
+                },
+                "tasks": [
+                  {
+                    "id": "t3_1",
+                    "title": "Read: Linear Independence and Linear Dependence Lemma in §2.A.",
+                    "type": "read",
+                    "completed": false,
+                    "tokenReward": 10
+                  },
+                  {
+                    "id": "t3_2",
+                    "title": "Construct a proof for the linear dependence lemma.",
+                    "type": "theory",
+                    "completed": false,
+                    "tokenReward": 10
+                  }
+                ]
+              },
+              {
+                "id": 4,
+                "name": "Lvl 4",
+                "title": "Bases and Dimension",
+                "description": "Spanning lists, minimal spanning sets, and dimension invariance.",
+                "status": "locked",
+                "progress": 0,
+                "coords": {
+                  "x": 67,
+                  "y": 46
+                },
+                "tasks": [
+                  {
+                    "id": "t4_1",
+                    "title": "Study: Every spanning list can be reduced to a basis.",
+                    "type": "read",
+                    "completed": false,
+                    "tokenReward": 10
+                  },
+                  {
+                    "id": "t4_2",
+                    "title": "Solve dimension equations for sum of subspaces: dim(U + W).",
+                    "type": "practice",
+                    "completed": false,
+                    "tokenReward": 10
+                  }
+                ]
+              },
+              {
+                "id": 5,
+                "name": "GATEWAY QUIZ",
+                "title": "Vector Spaces Gateway Quiz",
+                "description": "Complete the gateway assessment to unlock Unit II: Linear Transformations.",
+                "status": "unlocked",
+                "progress": 0,
+                "coords": {
+                  "x": 66,
+                  "y": 39
+                },
+                "tasks": []
+              }
+            ],
+            "gatewayQuiz": {
+              "title": "Gateway Quiz",
+              "description": "ATTEMPTS ALLOWED • Minimum 40% required to unlock Unit II",
+              "passingScore": 4,
+              "questions": [
+                {
+                  "id": "gw1",
+                  "question": "If V and W are vector spaces over F, then dim(V x W) is:",
+                  "options": [
+                    "dim(V) + dim(W)",
+                    "dim(V) * dim(W)",
+                    "max(dim V, dim W)",
+                    "dim(V) - dim(W)"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "The dimension of the direct product V x W equals dim(V) + dim(W)."
+                },
+                {
+                  "id": "gw2",
+                  "question": "Which of the following polynomials are linearly independent in P_2(R)?",
+                  "options": [
+                    "{1, x, x^2}",
+                    "{1, 1 + x, 2 + x}",
+                    "{x, x^2, x + x^2}",
+                    "{0, x, x^2}"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "The standard monomial basis {1, x, x^2} is linearly independent."
+                },
+                {
+                  "id": "gw3",
+                  "question": "The zero vector in a vector space V is:",
+                  "options": [
+                    "Unique",
+                    "Non-unique",
+                    "Always undefined",
+                    "Dependent on field characteristic"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "By the axioms of vector spaces, the additive identity is strictly unique."
+                },
+                {
+                  "id": "gw4",
+                  "question": "If a list of vectors v1, ..., vn spans V, then:",
+                  "options": [
+                    "Any linearly independent list in V has length <= n",
+                    "Any linearly independent list in V has length >= n",
+                    "dim(V) must equal n + 1",
+                    "V cannot be finite-dimensional"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Fundamental theorem: Length of linearly independent list <= length of spanning list."
+                },
+                {
+                  "id": "gw5",
+                  "question": "The intersection of any collection of subspaces of V is:",
+                  "options": [
+                    "Always a subspace of V",
+                    "Never a subspace unless both are trivial",
+                    "Only a subspace if V is real",
+                    "A manifold"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Arbitrary intersections of subspaces are always subspaces."
+                }
+              ]
+            }
+          },
+          {
+            "id": 2,
+            "roman": "II",
+            "title": "Linear Transformations",
+            "subtitle": "Linear Algebra • Unit 2",
+            "status": "locked",
+            "topics": [
+              "1. Definition of Maps",
+              "2. Fundamental Nullspaces",
+              "3. Invertibility & Matrices",
+              "4. Matrix of a Linear Map",
+              "5. Gateway Quiz"
+            ],
+            "coords": {
+              "angle": 342,
+              "radius": 155
+            },
+            "levels": [
+              {
+                "id": 1,
+                "name": "Lvl 1",
+                "title": "Linear Maps",
+                "description": "Definition and algebraic properties of linear transformations.",
+                "status": "unlocked",
+                "progress": 0,
+                "coords": {
+                  "x": 30,
+                  "y": 64
+                },
+                "tasks": [
+                  {
+                    "id": "u2_t1",
+                    "title": "Study linear maps preservation of addition and scalar multiplication.",
+                    "type": "read",
+                    "completed": false,
+                    "tokenReward": 10
+                  }
+                ]
+              }
+            ],
+            "gatewayQuiz": {
+              "title": "Unit II Gateway Quiz",
+              "description": "Prove mastery of linear transformations.",
+              "passingScore": 4,
+              "questions": []
+            }
+          },
+          {
+            "id": 3,
+            "roman": "III",
+            "title": "Eigenvalues & Eigenvectors",
+            "subtitle": "Linear Algebra • Unit 3",
+            "status": "locked",
+            "topics": [
+              "1. Invariant Subspaces",
+              "2. Characteristic Polynomial",
+              "3. Diagonalization",
+              "4. Eigenspaces",
+              "5. Gateway Quiz"
+            ],
+            "coords": {
+              "angle": 54,
+              "radius": 155
+            },
+            "levels": [],
+            "gatewayQuiz": {
+              "title": "Unit III Gateway Quiz",
+              "description": "Eigenvalues assessment.",
+              "passingScore": 4,
+              "questions": []
+            }
+          },
+          {
+            "id": 4,
+            "roman": "IV",
+            "title": "Inner Product Spaces",
+            "subtitle": "Linear Algebra • Unit 4",
+            "status": "locked",
+            "topics": [
+              "1. Inner Products & Norms",
+              "2. Orthonormal Bases",
+              "3. Gram-Schmidt Procedure",
+              "4. Orthogonal Complements",
+              "5. Gateway Quiz"
+            ],
+            "coords": {
+              "angle": 126,
+              "radius": 155
+            },
+            "levels": [],
+            "gatewayQuiz": {
+              "title": "Unit IV Gateway Quiz",
+              "description": "Inner Product assessment.",
+              "passingScore": 4,
+              "questions": []
+            }
+          },
+          {
+            "id": 5,
+            "roman": "V",
+            "title": "Operators on Complex Spaces",
+            "subtitle": "Linear Algebra • Unit 5",
+            "status": "locked",
+            "topics": [
+              "1. Generalized Eigenspaces",
+              "2. Nilpotent Operators",
+              "3. Jordan Canonical Form",
+              "4. Spectral Theorem",
+              "5. Final Mastery Gateway"
+            ],
+            "coords": {
+              "angle": 198,
+              "radius": 155
+            },
+            "levels": [],
+            "gatewayQuiz": {
+              "title": "Unit V Gateway Quiz",
+              "description": "Final complex operator mastery.",
+              "passingScore": 4,
+              "questions": []
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "environments": {
+    "default_scholar": [
+      {
+        "id": "carrara_atrium",
+        "name": "The Carrara & Azulejo Atrium",
+        "category": "environment",
+        "description": "Polished Italian White Carrara marble paired with vibrant blue and white patterned tiles.",
+        "price": 0,
+        "image": "/src/assets/images/white_carrara_marble_1791918498342.jpg",
+        "equipped": true,
+        "owned": true
+      },
+      {
+        "id": "scholars_desk",
+        "name": "The Scholar's Desk",
+        "category": "environment",
+        "description": "A warm mahogany desk overlooking the misty campus courtyard.",
+        "price": 0,
+        "image": "/src/assets/images/scholars_desk_1791915397551.jpg",
+        "equipped": false,
+        "owned": true
+      },
+      {
+        "id": "vintage_library",
+        "name": "The Vintage Library",
+        "category": "environment",
+        "description": "Tall mahogany bookcases filled with ancient tomes and arched glass windows.",
+        "price": 150,
+        "image": "/src/assets/images/vintage_library_1791915373462.jpg",
+        "equipped": false,
+        "owned": true
+      },
+      {
+        "id": "botanists_sanctuary",
+        "name": "The Botanist's Sanctuary",
+        "category": "environment",
+        "description": "Lush greenery and sun-drenched atrium of botanical wonders.",
+        "price": 200,
+        "image": "/src/assets/images/botanists_sanctuary_1791915423343.jpg",
+        "equipped": false,
+        "owned": false
+      }
+    ],
+    "test_scholar": [
+      {
+        "id": "carrara_atrium",
+        "name": "The Carrara & Azulejo Atrium",
+        "category": "environment",
+        "description": "Polished Italian White Carrara marble paired with vibrant blue and white patterned tiles.",
+        "price": 0,
+        "image": "/src/assets/images/white_carrara_marble_1791918498342.jpg",
+        "equipped": false,
+        "owned": true
+      },
+      {
+        "id": "scholars_desk",
+        "name": "The Scholar's Desk",
+        "category": "environment",
+        "description": "A warm mahogany desk overlooking the misty campus courtyard.",
+        "price": 0,
+        "image": "/src/assets/images/scholars_desk_1791915397551.jpg",
+        "equipped": false,
+        "owned": true
+      },
+      {
+        "id": "vintage_library",
+        "name": "The Vintage Library",
+        "category": "environment",
+        "description": "Tall mahogany bookcases filled with ancient tomes and arched glass windows.",
+        "price": 150,
+        "image": "/src/assets/images/vintage_library_1791915373462.jpg",
+        "equipped": true,
+        "owned": true
+      },
+      {
+        "id": "botanists_sanctuary",
+        "name": "The Botanist's Sanctuary",
+        "category": "environment",
+        "description": "Lush greenery and sun-drenched atrium of botanical wonders.",
+        "price": 200,
+        "image": "/src/assets/images/botanists_sanctuary_1791915423343.jpg",
+        "equipped": false,
+        "owned": false
+      }
+    ],
+    "debug_user": [
+      {
+        "id": "carrara_atrium",
+        "name": "The Carrara & Azulejo Atrium",
+        "category": "environment",
+        "description": "Polished Italian White Carrara marble paired with vibrant blue and white patterned tiles.",
+        "price": 0,
+        "image": "/src/assets/images/white_carrara_marble_1791918498342.jpg",
+        "equipped": true,
+        "owned": true
+      },
+      {
+        "id": "scholars_desk",
+        "name": "The Scholar's Desk",
+        "category": "environment",
+        "description": "A warm mahogany desk overlooking the misty campus courtyard.",
+        "price": 0,
+        "image": "/src/assets/images/scholars_desk_1791915397551.jpg",
+        "equipped": false,
+        "owned": true
+      },
+      {
+        "id": "vintage_library",
+        "name": "The Vintage Library",
+        "category": "environment",
+        "description": "Tall mahogany bookcases filled with ancient tomes and arched glass windows.",
+        "price": 150,
+        "image": "/src/assets/images/vintage_library_1791915373462.jpg",
+        "equipped": false,
+        "owned": true
+      },
+      {
+        "id": "botanists_sanctuary",
+        "name": "The Botanist's Sanctuary",
+        "category": "environment",
+        "description": "Lush greenery and sun-drenched atrium of botanical wonders.",
+        "price": 200,
+        "image": "/src/assets/images/botanists_sanctuary_1791915423343.jpg",
+        "equipped": false,
+        "owned": false
+      }
+    ]
+  },
+  "pets": {
+    "default_scholar": [
+      {
+        "id": "lumis",
+        "name": "Lumis",
+        "title": "Lumis",
+        "description": "A radiant companion that glows when you focus.",
+        "quote": "Keep your focus lit, and no theorem stays dark.",
+        "image": "/src/assets/images/pet_lumis_candle_1791915491071.jpg",
+        "price": 100,
+        "owned": true,
+        "equipped": false,
+        "buff": "+5% Focus Clarity bonus"
+      },
+      {
+        "id": "frodo",
+        "name": "Frodo",
+        "title": "Frodo",
+        "description": "An energetic cozy buddy who loves complex theorems.",
+        "quote": "Mrow! Linear transformations are just vector dances!",
+        "image": "/src/assets/images/pet_frodo_kitten_1791915456806.jpg",
+        "price": 150,
+        "owned": true,
+        "equipped": true,
+        "buff": "+10% Token yield on level completions"
+      },
+      {
+        "id": "astrofel",
+        "name": "Astrofel",
+        "title": "Astrofel",
+        "description": "A cosmic owl bearing ancient knowledge.",
+        "quote": "The geometry of the universe is inscribed in linear algebra.",
+        "image": "/src/assets/images/pet_astrofel_owl_1791915569937.jpg",
+        "price": 200,
+        "owned": false,
+        "equipped": false,
+        "buff": "+15% Gateway Quiz preparation insight"
+      },
+      {
+        "id": "vellum",
+        "name": "Vellum",
+        "title": "Vellum",
+        "description": "Guardian of the old scrolls. A tiny scholarly dragon.",
+        "quote": "I protect every proof from logical fallacies!",
+        "image": "/src/assets/images/pet_vellum_dragon_1791915526612.jpg",
+        "price": 250,
+        "owned": false,
+        "equipped": false,
+        "buff": "+20% Proof stamina"
+      },
+      {
+        "id": "quill",
+        "name": "Quill",
+        "title": "Quill",
+        "description": "Messenger of the skies. Timeless wisdom delivered.",
+        "quote": "Precision in definition is the soul of mathematics.",
+        "image": "/src/assets/images/pet_quill_owl_1791915614431.jpg",
+        "price": 180,
+        "owned": false,
+        "equipped": false,
+        "buff": "+10% Speed reading bonus"
+      }
+    ],
+    "test_scholar": [
+      {
+        "id": "lumis",
+        "name": "Lumis",
+        "title": "Lumis",
+        "description": "A radiant companion that glows when you focus.",
+        "quote": "Keep your focus lit, and no theorem stays dark.",
+        "image": "/src/assets/images/pet_lumis_candle_1791915491071.jpg",
+        "price": 100,
+        "owned": true,
+        "equipped": false,
+        "buff": "+5% Focus Clarity bonus"
+      },
+      {
+        "id": "frodo",
+        "name": "Frodo",
+        "title": "Frodo",
+        "description": "An energetic cozy buddy who loves complex theorems.",
+        "quote": "Mrow! Linear transformations are just vector dances!",
+        "image": "/src/assets/images/pet_frodo_kitten_1791915456806.jpg",
+        "price": 150,
+        "owned": true,
+        "equipped": true,
+        "buff": "+10% Token yield on level completions"
+      },
+      {
+        "id": "astrofel",
+        "name": "Astrofel",
+        "title": "Astrofel",
+        "description": "A cosmic owl bearing ancient knowledge.",
+        "quote": "The geometry of the universe is inscribed in linear algebra.",
+        "image": "/src/assets/images/pet_astrofel_owl_1791915569937.jpg",
+        "price": 200,
+        "owned": false,
+        "equipped": false,
+        "buff": "+15% Gateway Quiz preparation insight"
+      },
+      {
+        "id": "vellum",
+        "name": "Vellum",
+        "title": "Vellum",
+        "description": "Guardian of the old scrolls. A tiny scholarly dragon.",
+        "quote": "I protect every proof from logical fallacies!",
+        "image": "/src/assets/images/pet_vellum_dragon_1791915526612.jpg",
+        "price": 250,
+        "owned": false,
+        "equipped": false,
+        "buff": "+20% Proof stamina"
+      },
+      {
+        "id": "quill",
+        "name": "Quill",
+        "title": "Quill",
+        "description": "Messenger of the skies. Timeless wisdom delivered.",
+        "quote": "Precision in definition is the soul of mathematics.",
+        "image": "/src/assets/images/pet_quill_owl_1791915614431.jpg",
+        "price": 180,
+        "owned": false,
+        "equipped": false,
+        "buff": "+10% Speed reading bonus"
+      }
+    ],
+    "debug_user": [
+      {
+        "id": "lumis",
+        "name": "Lumis",
+        "title": "Lumis",
+        "description": "A radiant companion that glows when you focus.",
+        "quote": "Keep your focus lit, and no theorem stays dark.",
+        "image": "/src/assets/images/pet_lumis_candle_1791915491071.jpg",
+        "price": 100,
+        "owned": true,
+        "equipped": false,
+        "buff": "+5% Focus Clarity bonus"
+      },
+      {
+        "id": "frodo",
+        "name": "Frodo",
+        "title": "Frodo",
+        "description": "An energetic cozy buddy who loves complex theorems.",
+        "quote": "Mrow! Linear transformations are just vector dances!",
+        "image": "/src/assets/images/pet_frodo_kitten_1791915456806.jpg",
+        "price": 150,
+        "owned": true,
+        "equipped": true,
+        "buff": "+10% Token yield on level completions"
+      },
+      {
+        "id": "astrofel",
+        "name": "Astrofel",
+        "title": "Astrofel",
+        "description": "A cosmic owl bearing ancient knowledge.",
+        "quote": "The geometry of the universe is inscribed in linear algebra.",
+        "image": "/src/assets/images/pet_astrofel_owl_1791915569937.jpg",
+        "price": 200,
+        "owned": false,
+        "equipped": false,
+        "buff": "+15% Gateway Quiz preparation insight"
+      },
+      {
+        "id": "vellum",
+        "name": "Vellum",
+        "title": "Vellum",
+        "description": "Guardian of the old scrolls. A tiny scholarly dragon.",
+        "quote": "I protect every proof from logical fallacies!",
+        "image": "/src/assets/images/pet_vellum_dragon_1791915526612.jpg",
+        "price": 250,
+        "owned": false,
+        "equipped": false,
+        "buff": "+20% Proof stamina"
+      },
+      {
+        "id": "quill",
+        "name": "Quill",
+        "title": "Quill",
+        "description": "Messenger of the skies. Timeless wisdom delivered.",
+        "quote": "Precision in definition is the soul of mathematics.",
+        "image": "/src/assets/images/pet_quill_owl_1791915614431.jpg",
+        "price": 180,
+        "owned": false,
+        "equipped": false,
+        "buff": "+10% Speed reading bonus"
+      }
+    ]
+  },
+  "activities": [
+    {
+      "date": "2026-10-14",
+      "minutes": 25,
+      "tokensEarned": 25,
+      "type": "focus_session",
+      "id": "act_981f0v6",
+      "userId": "default_scholar",
+      "timestamp": "2026-10-14T09:43:00.302Z"
+    },
+    {
+      "date": "2026-10-14",
+      "minutes": 25,
+      "tokensEarned": 25,
+      "type": "focus_session",
+      "id": "act_emyu268",
+      "userId": "default_scholar",
+      "timestamp": "2026-10-14T10:28:05.190Z"
+    },
+    {
+      "date": "2026-10-14",
+      "minutes": 45,
+      "tokensEarned": 50,
+      "type": "quiz_completion",
+      "id": "act_qbaw36a",
+      "userId": "test_scholar",
+      "timestamp": "2026-10-14T10:31:50.569Z"
+    },
+    {
+      "date": "2026-10-14",
+      "minutes": 25,
+      "tokensEarned": 25,
+      "type": "focus_session",
+      "id": "act_q91f0i6",
+      "userId": "test_scholar",
+      "timestamp": "2026-10-14T10:31:50.588Z"
+    }
+  ],
+  "transactions": [
+    {
+      "id": "tx_init",
+      "userId": "default_scholar",
+      "amount": 245,
+      "type": "credit",
+      "reason": "Initial onboarding stipend",
+      "timestamp": "2026-10-14T09:43:00.298Z"
+    },
+    {
+      "id": "tx_ywe63ud",
+      "userId": "default_scholar",
+      "amount": 10,
+      "type": "credit",
+      "reason": "Test quest reward",
+      "timestamp": "2026-10-14T09:43:00.301Z"
+    },
+    {
+      "id": "tx_y6iyewf",
+      "userId": "default_scholar",
+      "amount": 25,
+      "type": "credit",
+      "reason": "Completed Focus Session",
+      "timestamp": "2026-10-14T10:28:05.189Z"
+    },
+    {
+      "id": "tx_991lcvq",
+      "userId": "test_scholar",
+      "amount": 50,
+      "type": "credit",
+      "reason": "Mastered Unit 1 Gateway Quiz",
+      "timestamp": "2026-10-14T10:31:50.568Z"
+    },
+    {
+      "id": "tx_f1xt2xx",
+      "userId": "test_scholar",
+      "amount": 150,
+      "type": "debit",
+      "reason": "Purchased vintage_library (environment)",
+      "timestamp": "2026-10-14T10:31:50.579Z"
+    },
+    {
+      "id": "tx_sow4128",
+      "userId": "test_scholar",
+      "amount": 25,
+      "type": "credit",
+      "reason": "Completed Focus Session",
+      "timestamp": "2026-10-14T10:31:50.588Z"
+    }
+  ],
+  "heatmaps": {
+    "default_scholar": [
+      {
+        "date": "2026-09-10",
+        "minutes": 25,
+        "intensity": 1
+      },
+      {
+        "date": "2026-09-11",
+        "minutes": 45,
+        "intensity": 2
+      },
+      {
+        "date": "2026-09-12",
+        "minutes": 150,
+        "intensity": 3
+      },
+      {
+        "date": "2026-09-13",
+        "minutes": 0,
+        "intensity": 0
+      },
+      {
+        "date": "2026-09-14",
+        "minutes": 45,
+        "intensity": 2
+      },
+      {
+        "date": "2026-09-15",
+        "minutes": 140,
+        "intensity": 3
+      },
+      {
+        "date": "2026-09-16",
+        "minutes": 0,
+        "intensity": 0
+      },
+      {
+        "date": "2026-09-17",
+        "minutes": 25,
+        "intensity": 1
+      },
+      {
+        "date": "2026-09-18",
+        "minutes": 130,
+        "intensity": 3
+      },
+      {
+        "date": "2026-09-19",
+        "minutes": 0,
+        "intensity": 0
+      },
+      {
+        "date": "2026-09-20",
+        "minutes": 25,
+        "intensity": 1
+      },
+      {
+        "date": "2026-09-21",
+        "minutes": 45,
+        "intensity": 2
+      },
+      {
+        "date": "2026-09-22",
+        "minutes": 150,
+        "intensity": 3
+      },
+      {
+        "date": "2026-09-23",
+        "minutes": 0,
+        "intensity": 0
+      },
+      {
+        "date": "2026-09-24",
+        "minutes": 45,
+        "intensity": 2
+      },
+      {
+        "date": "2026-09-25",
+        "minutes": 140,
+        "intensity": 3
+      },
+      {
+        "date": "2026-09-26",
+        "minutes": 0,
+        "intensity": 0
+      },
+      {
+        "date": "2026-09-27",
+        "minutes": 25,
+        "intensity": 1
+      },
+      {
+        "date": "2026-09-28",
+        "minutes": 130,
+        "intensity": 3
+      },
+      {
+        "date": "2026-09-29",
+        "minutes": 0,
+        "intensity": 0
+      },
+      {
+        "date": "2026-09-30",
+        "minutes": 25,
+        "intensity": 1
+      },
+      {
+        "date": "2026-10-01",
+        "minutes": 45,
+        "intensity": 2
+      },
+      {
+        "date": "2026-10-02",
+        "minutes": 150,
+        "intensity": 3
+      },
+      {
+        "date": "2026-10-03",
+        "minutes": 0,
+        "intensity": 0
+      },
+      {
+        "date": "2026-10-04",
+        "minutes": 45,
+        "intensity": 2
+      },
+      {
+        "date": "2026-10-05",
+        "minutes": 140,
+        "intensity": 3
+      },
+      {
+        "date": "2026-10-06",
+        "minutes": 0,
+        "intensity": 0
+      },
+      {
+        "date": "2026-10-07",
+        "minutes": 25,
+        "intensity": 1
+      },
+      {
+        "date": "2026-10-08",
+        "minutes": 130,
+        "intensity": 3
+      },
+      {
+        "date": "2026-10-09",
+        "minutes": 0,
+        "intensity": 0
+      },
+      {
+        "date": "2026-10-10",
+        "minutes": 75,
+        "intensity": 3
+      },
+      {
+        "date": "2026-10-11",
+        "minutes": 75,
+        "intensity": 3
+      },
+      {
+        "date": "2026-10-12",
+        "minutes": 75,
+        "intensity": 3
+      },
+      {
+        "date": "2026-10-13",
+        "minutes": 75,
+        "intensity": 3
+      },
+      {
+        "date": "2026-10-14",
+        "minutes": 125,
+        "intensity": 4
+      }
+    ],
+    "test_scholar": [
+      {
+        "date": "2026-09-10",
+        "minutes": 25,
+        "intensity": 1
+      },
+      {
+        "date": "2026-09-11",
+        "minutes": 45,
+        "intensity": 2
+      },
+      {
+        "date": "2026-09-12",
+        "minutes": 150,
+        "intensity": 3
+      },
+      {
+        "date": "2026-09-13",
+        "minutes": 0,
+        "intensity": 0
+      },
+      {
+        "date": "2026-09-14",
+        "minutes": 45,
+        "intensity": 2
+      },
+      {
+        "date": "2026-09-15",
+        "minutes": 140,
+        "intensity": 3
+      },
+      {
+        "date": "2026-09-16",
+        "minutes": 0,
+        "intensity": 0
+      },
+      {
+        "date": "2026-09-17",
+        "minutes": 25,
+        "intensity": 1
+      },
+      {
+        "date": "2026-09-18",
+        "minutes": 130,
+        "intensity": 3
+      },
+      {
+        "date": "2026-09-19",
+        "minutes": 0,
+        "intensity": 0
+      },
+      {
+        "date": "2026-09-20",
+        "minutes": 25,
+        "intensity": 1
+      },
+      {
+        "date": "2026-09-21",
+        "minutes": 45,
+        "intensity": 2
+      },
+      {
+        "date": "2026-09-22",
+        "minutes": 150,
+        "intensity": 3
+      },
+      {
+        "date": "2026-09-23",
+        "minutes": 0,
+        "intensity": 0
+      },
+      {
+        "date": "2026-09-24",
+        "minutes": 45,
+        "intensity": 2
+      },
+      {
+        "date": "2026-09-25",
+        "minutes": 140,
+        "intensity": 3
+      },
+      {
+        "date": "2026-09-26",
+        "minutes": 0,
+        "intensity": 0
+      },
+      {
+        "date": "2026-09-27",
+        "minutes": 25,
+        "intensity": 1
+      },
+      {
+        "date": "2026-09-28",
+        "minutes": 130,
+        "intensity": 3
+      },
+      {
+        "date": "2026-09-29",
+        "minutes": 0,
+        "intensity": 0
+      },
+      {
+        "date": "2026-09-30",
+        "minutes": 25,
+        "intensity": 1
+      },
+      {
+        "date": "2026-10-01",
+        "minutes": 45,
+        "intensity": 2
+      },
+      {
+        "date": "2026-10-02",
+        "minutes": 150,
+        "intensity": 3
+      },
+      {
+        "date": "2026-10-03",
+        "minutes": 0,
+        "intensity": 0
+      },
+      {
+        "date": "2026-10-04",
+        "minutes": 45,
+        "intensity": 2
+      },
+      {
+        "date": "2026-10-05",
+        "minutes": 140,
+        "intensity": 3
+      },
+      {
+        "date": "2026-10-06",
+        "minutes": 0,
+        "intensity": 0
+      },
+      {
+        "date": "2026-10-07",
+        "minutes": 25,
+        "intensity": 1
+      },
+      {
+        "date": "2026-10-08",
+        "minutes": 130,
+        "intensity": 3
+      },
+      {
+        "date": "2026-10-09",
+        "minutes": 0,
+        "intensity": 0
+      },
+      {
+        "date": "2026-10-10",
+        "minutes": 75,
+        "intensity": 3
+      },
+      {
+        "date": "2026-10-11",
+        "minutes": 75,
+        "intensity": 3
+      },
+      {
+        "date": "2026-10-12",
+        "minutes": 75,
+        "intensity": 3
+      },
+      {
+        "date": "2026-10-13",
+        "minutes": 75,
+        "intensity": 3
+      },
+      {
+        "date": "2026-10-14",
+        "minutes": 145,
+        "intensity": 4
+      }
+    ],
+    "debug_user": [
+      {
+        "date": "2026-09-10",
+        "minutes": 25,
+        "intensity": 1
+      },
+      {
+        "date": "2026-09-11",
+        "minutes": 45,
+        "intensity": 2
+      },
+      {
+        "date": "2026-09-12",
+        "minutes": 150,
+        "intensity": 3
+      },
+      {
+        "date": "2026-09-13",
+        "minutes": 0,
+        "intensity": 0
+      },
+      {
+        "date": "2026-09-14",
+        "minutes": 45,
+        "intensity": 2
+      },
+      {
+        "date": "2026-09-15",
+        "minutes": 140,
+        "intensity": 3
+      },
+      {
+        "date": "2026-09-16",
+        "minutes": 0,
+        "intensity": 0
+      },
+      {
+        "date": "2026-09-17",
+        "minutes": 25,
+        "intensity": 1
+      },
+      {
+        "date": "2026-09-18",
+        "minutes": 130,
+        "intensity": 3
+      },
+      {
+        "date": "2026-09-19",
+        "minutes": 0,
+        "intensity": 0
+      },
+      {
+        "date": "2026-09-20",
+        "minutes": 25,
+        "intensity": 1
+      },
+      {
+        "date": "2026-09-21",
+        "minutes": 45,
+        "intensity": 2
+      },
+      {
+        "date": "2026-09-22",
+        "minutes": 150,
+        "intensity": 3
+      },
+      {
+        "date": "2026-09-23",
+        "minutes": 0,
+        "intensity": 0
+      },
+      {
+        "date": "2026-09-24",
+        "minutes": 45,
+        "intensity": 2
+      },
+      {
+        "date": "2026-09-25",
+        "minutes": 140,
+        "intensity": 3
+      },
+      {
+        "date": "2026-09-26",
+        "minutes": 0,
+        "intensity": 0
+      },
+      {
+        "date": "2026-09-27",
+        "minutes": 25,
+        "intensity": 1
+      },
+      {
+        "date": "2026-09-28",
+        "minutes": 130,
+        "intensity": 3
+      },
+      {
+        "date": "2026-09-29",
+        "minutes": 0,
+        "intensity": 0
+      },
+      {
+        "date": "2026-09-30",
+        "minutes": 25,
+        "intensity": 1
+      },
+      {
+        "date": "2026-10-01",
+        "minutes": 45,
+        "intensity": 2
+      },
+      {
+        "date": "2026-10-02",
+        "minutes": 150,
+        "intensity": 3
+      },
+      {
+        "date": "2026-10-03",
+        "minutes": 0,
+        "intensity": 0
+      },
+      {
+        "date": "2026-10-04",
+        "minutes": 45,
+        "intensity": 2
+      },
+      {
+        "date": "2026-10-05",
+        "minutes": 140,
+        "intensity": 3
+      },
+      {
+        "date": "2026-10-06",
+        "minutes": 0,
+        "intensity": 0
+      },
+      {
+        "date": "2026-10-07",
+        "minutes": 25,
+        "intensity": 1
+      },
+      {
+        "date": "2026-10-08",
+        "minutes": 130,
+        "intensity": 3
+      },
+      {
+        "date": "2026-10-09",
+        "minutes": 0,
+        "intensity": 0
+      },
+      {
+        "date": "2026-10-10",
+        "minutes": 75,
+        "intensity": 3
+      },
+      {
+        "date": "2026-10-11",
+        "minutes": 75,
+        "intensity": 3
+      },
+      {
+        "date": "2026-10-12",
+        "minutes": 75,
+        "intensity": 3
+      },
+      {
+        "date": "2026-10-13",
+        "minutes": 75,
+        "intensity": 3
+      },
+      {
+        "date": "2026-10-14",
+        "minutes": 75,
+        "intensity": 3
+      }
+    ]
+  }
+}
