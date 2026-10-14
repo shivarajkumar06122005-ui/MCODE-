@@ -343,13 +343,17 @@ apiRouter.post('/courses/:courseId/units/:unitId/gateway-quiz', (req: Request, r
       }
     });
   } else {
-    correctCount = 4; // Default high pass
-  }
+  return res.status(400).json({
+    error: 'Quiz answers are required',
+  });
+}
 
   // Score normalized out of 10 as shown in video (Score: 9 / 10)
-  const score = Math.max(9, Math.round((correctCount / total) * 10));
-  const passed = score >= 4;
-
+  const score = total > 0
+  ? Math.round((correctCount / total) * 10)
+  : 0;
+  const passed = total > 0 && correctCount / total >= 0.7;
+  
   let updatedCourse = course;
   let tokensEarned = 0;
   let currentTokens = db.getUser(userId).tokens;
