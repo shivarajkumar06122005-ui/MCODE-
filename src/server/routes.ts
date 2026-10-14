@@ -170,15 +170,27 @@ apiRouter.post('/courses/:courseId/tasks/:taskId/toggle', (req: Request, res: Re
   db.updateCourse(userId, updatedCourse);
 
   let currentTokens = db.getUser(userId).tokens;
-  if (taskCompleted && tokenAward > 0) {
-    const resTokens = db.updateTokens(userId, tokenAward, `Completed quest task ${taskId}`);
-    currentTokens = resTokens.tokens;
-    db.logActivity(userId, {
-      date: new Date().toISOString().split('T')[0],
-      minutes: 15,
-      tokensEarned: tokenAward,
-      type: 'task_completion',
-    });
+    if (taskCompleted && tokenAward > 0) {
+    const reward = db.claimRewardOnce(
+      userId,
+      `task:${courseId}:${uId}:${lId}:${taskId}`,
+      tokenAward,
+      `Completed quest task ${taskId}`
+    );
+
+    if (reward.awarded) {
+      currentTokens = reward.tokens;
+
+      db.logActivity(userId, {
+        date: new Date().toISOString().split('T')[0],
+        minutes: 15,
+        tokensEarned: tokenAward,
+        type: 'task_completion',
+      });
+    } else {
+      tokenAward = 0;
+      currentTokens = reward.tokens;
+    }
   }
 
   res.json({
